@@ -6,7 +6,7 @@ import ErrorMessage from './components/ErrorMessage';
 const STORE_CONFIG = gql`
   query {
     storeConfig{
-      default_titless,
+      default_title,
       welcome
     }
   }
