@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render proper shape 1`] = `
+Object {
+  "navigationData": Array [
+    Object {
+      "categoryUrl": "/category/sale.html",
+      "id": 37,
+      "include_in_menu": 1,
+      "name": "Sale",
+      "position": 1,
+      "url_path": "sale",
+      "url_suffix": ".html",
+    },
+    Object {
+      "categoryUrl": "/category/men.html",
+      "id": 11,
+      "include_in_menu": 1,
+      "name": "Men",
+      "position": 3,
+      "url_path": "men",
+      "url_suffix": ".html",
+    },
+    Object {
+      "categoryUrl": "/category/gear.html",
+      "id": 3,
+      "include_in_menu": 1,
+      "name": "Gear",
+      "position": 4,
+      "url_path": "gear",
+      "url_suffix": ".html",
+    },
+    Object {
+      "categoryUrl": "/category/training.html",
+      "id": 9,
+      "include_in_menu": 1,
+      "name": "Training",
+      "position": 5,
+      "url_path": "training",
+      "url_suffix": ".html",
+    },
+    Object {
+      "categoryUrl": "/category/what-is-new.html",
+      "id": 38,
+      "include_in_menu": 1,
+      "name": "What's New",
+      "position": 10,
+      "url_path": "what-is-new",
+      "url_suffix": ".html",
+    },
+  ],
+}
+`;
