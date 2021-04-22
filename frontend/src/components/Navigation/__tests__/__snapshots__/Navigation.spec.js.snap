@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navigation renders correctly 1`] = `
+<div>
+  <nav
+    class="navbar navbar-expand-lg navbar-light bg-light"
+  >
+    <div
+      class="container"
+    >
+      <button
+        aria-controls="primary-nav"
+        aria-label="Toggle navigation"
+        class="navbar-toggler collapsed"
+        type="button"
+      >
+        <span
+          class="navbar-toggler-icon"
+        />
+      </button>
+      <div
+        class="navbar-collapse collapse"
+        id="primary-nav"
+      >
+        <div
+          class="mr-auto navbar-nav"
+        >
+          <div
+            class="nav-item"
+          >
+            <a
+              class="nav-link"
+              data-rb-event-key="/category/what-is-new.html"
+              href="/category/what-is-new.html"
+            >
+              What's New
+            </a>
+          </div>
+          <div
+            class="nav-item"
+          >
+            <a
+              class="nav-link"
+              data-rb-event-key="/category/women.html"
+              href="/category/women.html"
+            >
+              Women
+            </a>
+          </div>
+          <div
+            class="nav-item"
+          >
+            <a
+              class="nav-link"
+              data-rb-event-key="/category/men.html"
+              href="/category/men.html"
+            >
+              Men
+            </a>
+          </div>
+          <div
+            class="nav-item"
+          >
+            <a
+              class="nav-link"
+              data-rb-event-key="/category/gear.html"
+              href="/category/gear.html"
+            >
+              Gear
+            </a>
+          </div>
+          <div
+            class="nav-item"
+          >
+            <a
+              class="nav-link"
+              data-rb-event-key="/category/training.html"
+              href="/category/training.html"
+            >
+              Training
+            </a>
+          </div>
+          <div
+            class="nav-item"
+          >
+            <a
+              class="nav-link"
+              data-rb-event-key="/category/sale.html"
+              href="/category/sale.html"
+            >
+              Sale
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>
+`;
