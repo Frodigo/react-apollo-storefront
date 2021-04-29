@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PageLogo renders correctly 1`] = `
+<div>
+  <a
+    href="/"
+  >
+    React Apollo
+  </a>
+</div>
+`;

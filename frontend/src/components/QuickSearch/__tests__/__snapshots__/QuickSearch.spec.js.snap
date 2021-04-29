@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`QuickSearch renders correctly 1`] = `
+<div>
+  <form
+    class="w-100 justify-content-center form-inline"
+  >
+    <input
+      class="mr-2 w-75 form-control"
+      placeholder="Search entire shop"
+      type="text"
+    />
+    <button
+      class="btn btn-outline-success"
+      type="button"
+    >
+      <i
+        class="bi bi-search"
+      />
+    </button>
+  </form>
+</div>
+`;
