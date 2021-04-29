@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HeaderActions renders correctly 1`] = `
+<div>
+  <div
+    class="nav"
+  >
+    <div
+      class="nav-item"
+    >
+      <a
+        class="nav-link"
+        data-rb-event-key="#"
+        href="#"
+        role="button"
+      >
+        <i
+          class="bi bi-heart-fill"
+        />
+      </a>
+    </div>
+    <div
+      class="nav-item"
+    >
+      <a
+        class="nav-link"
+        data-rb-event-key="#"
+        href="#"
+        role="button"
+      >
+        <i
+          class="bi bi-person-fill"
+        />
+      </a>
+    </div>
+    <div
+      class="nav-item"
+    >
+      <a
+        class="nav-link"
+        data-rb-event-key="#"
+        href="#"
+        role="button"
+      >
+        <i
+          class="bi bi-cart-fill"
+        />
+      </a>
+    </div>
+  </div>
+</div>
+`;

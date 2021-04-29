@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PageHeader renders correctly 1`] = `
+<div>
+  <header>
+    <div
+      class="d-none d-lg-block container"
+    >
+      <div
+        class="d-flex align-items-center pb-3 pt-3 row"
+      >
+        <div
+          class="col-sm-3"
+        >
+          <a>
+            Page logo
+          </a>
+        </div>
+        <div
+          class="col-sm-6"
+        >
+          <form>
+            Quick search
+          </form>
+        </div>
+        <div
+          class="col-sm-3"
+        >
+          <nav>
+            Header actions
+          </nav>
+        </div>
+      </div>
+    </div>
+    <nav>
+      Navigation
+    </nav>
+  </header>
+</div>
+`;

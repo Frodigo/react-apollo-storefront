@@ -8,6 +8,12 @@ exports[`Navigation renders correctly 1`] = `
     <div
       class="container"
     >
+      <a
+        class="d-lg-none"
+        href="/"
+      >
+        React Apollo
+      </a>
       <button
         aria-controls="primary-nav"
         aria-label="Toggle navigation"

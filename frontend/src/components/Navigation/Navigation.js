@@ -13,7 +13,8 @@ const Navigation = () => {
 
     const shouldDisplayNavigation = navigationItems && navigationItems.length ? <Navbar bg="light" expand="lg">
         <Container>
-        <Navbar.Toggle aria-controls="primary-nav" />
+            <a href="/" className="d-lg-none">React Apollo</a>
+            <Navbar.Toggle aria-controls="primary-nav" />
             <Navbar.Collapse id="primary-nav">
                 <Nav className="mr-auto" activeKey="/">
                     {navigationItems}
