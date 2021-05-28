@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 import { useQuery } from '@apollo/client';
-import { GET_NAVIGATION } from '../../queries/category'
+import { GET_NAVIGATION } from '../../queries/category.gql'
 
 /**
  * The useNavigation hook provides data and business logic for the Navigation component
