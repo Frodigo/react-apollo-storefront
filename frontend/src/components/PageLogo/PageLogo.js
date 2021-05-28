@@ -2,7 +2,7 @@ import React from 'react';
 
 
 const PageLogo = () => {
-    return <a href="/">React Apollo</a>
+    return <a href="/">React Apollo Storefront</a>
 };
 
 
