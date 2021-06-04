@@ -17,7 +17,7 @@ const PageHeader = () => {
                     <Col sm={6}>
                         <QuickSearch/>
                     </Col>
-                    <Col sm={3}>
+                    <Col sm={3} className="d-flex">
                         <HeaderActions/>
                     </Col>
                 </Row>

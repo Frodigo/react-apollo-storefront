@@ -11,19 +11,20 @@ const Navigation = () => {
         </Nav.Item>
     );
 
-    const shouldDisplayNavigation = navigationItems && navigationItems.length ? <Navbar bg="light" expand="lg">
+
+    const shouldDisplayNavigation = navigationItems && navigationItems.length ? <Navbar.Collapse id="primary-nav">
+        <Nav className="mr-auto" activeKey="/">
+            {navigationItems}
+        </Nav>
+    </Navbar.Collapse> : null;
+
+    return <Navbar bg="light" expand="lg" style={{minHeight: '56px'}}>
         <Container>
             <a href="/" className="d-lg-none">React Apollo</a>
             <Navbar.Toggle aria-controls="primary-nav" />
-            <Navbar.Collapse id="primary-nav">
-                <Nav className="mr-auto" activeKey="/">
-                    {navigationItems}
-                </Nav>
-            </Navbar.Collapse>
+            {shouldDisplayNavigation}
         </Container>
-    </Navbar> : null;
-
-    return shouldDisplayNavigation;
+    </Navbar>
 };
 
 export default Navigation;
