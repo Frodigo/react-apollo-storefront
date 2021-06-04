@@ -3,7 +3,7 @@ import { Nav } from 'react-bootstrap';
 
 const HeaderActions = () => {
     return (
-        <Nav>
+        <Nav style={{marginLeft: 'auto'}}>
             <Nav.Item>
                 <Nav.Link href="#">
                     <i className="bi bi-heart-fill"></i>
