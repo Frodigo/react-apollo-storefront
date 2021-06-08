@@ -18,7 +18,7 @@ export const GET_NAVIGATION = gql`
 `;
 
 export const GET_CATEGORY_PAGE_CONTENT = gql`
-    query getCategoryPageContent($urlKey: String!) {
+    query getCategoryPageContent($urlKey: String!, $currentPage: Int = 1 ) {
         categoryList(filters: { url_key: { eq: $urlKey}}) {
             id
             description
@@ -36,7 +36,7 @@ export const GET_CATEGORY_PAGE_CONTENT = gql`
                 description
                 product_count
             }
-            products {
+            products(currentPage: $currentPage) {
                 items {
                     name
                     uid
@@ -70,6 +70,11 @@ export const GET_CATEGORY_PAGE_CONTENT = gql`
                     }
                 }
                 total_count
+                page_info {
+                    current_page
+                    page_size
+                    total_pages
+                  }
             }
         }
     }

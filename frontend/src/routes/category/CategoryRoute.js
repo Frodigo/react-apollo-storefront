@@ -2,11 +2,16 @@ import React, { useMemo } from 'react';
 import { useParams } from 'react-router-dom';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 
+import CategoryPagination from '../../components/CategoryPagination'
 import useCategoryRoute from '../../hooks/useCategoryRoute';
 
-const CategoryRoute = () => {
+const CategoryRoute = (props) => {
+    const query = useMemo(() => {
+        return new URLSearchParams(props.location.search);
+    }, [props.location.search])
+    const initialPage = query.get('page') ? query.get('page') : 1;
     const { categoryUrlKey } = useParams();
-    const { categoryData, isLoading } = useCategoryRoute({categoryUrlKey});
+    const { categoryData, isLoading, changeCurrentPage } = useCategoryRoute({categoryUrlKey, initialPage});
     const noItemsElement = <Container className="mt-3 mb-3">No items found.</Container>;
 
     const {
@@ -20,17 +25,25 @@ const CategoryRoute = () => {
 
     const productsFound = useMemo(() => {
         return products ? products.total_count : productCount
-    }, [productCount, products])
+    }, [productCount, products]);
 
     const shouldDisplayDescription = useMemo(() => {
         return description ? <div dangerouslySetInnerHTML={{ __html: description }} /> : null;
-    }, [description])
+    }, [description]);
 
     const shouldDisplayImage = useMemo(() => {
         return image ? <figure>
             <img src={image} className="w-100" alt={categoryName}/>
         </figure> : null;
-    }, [categoryName, image])
+    }, [categoryName, image]);
+
+    const totalPages = useMemo(() => {
+        return products && products.page_info ? products.page_info.total_pages : null;
+    }, [products]);
+
+    const currentPage = useMemo(() => {
+        return products && products.page_info ? products.page_info.current_page : initialPage;
+    }, [initialPage, products])
 
     const shouldDisplayChildCategories = useMemo(() => {
         return children && children.length ? <>
@@ -73,7 +86,12 @@ const CategoryRoute = () => {
                 })}
             </Row>
         </> : null;
-    }, [products])
+    }, [products]);
+
+    const shouldDisplayPagination = totalPages && totalPages > 1 ?
+        <CategoryPagination totalPages={totalPages} currentPage={currentPage} onChange={changeCurrentPage}/>
+        :
+        null;
 
     if (isLoading) return <Container className="mt-3 mb-3">loading...</Container>;
 
@@ -91,8 +109,8 @@ const CategoryRoute = () => {
             {shouldDisplayDescription}
             {shouldDisplayChildCategories}
             {shouldDisplayProducts}
+            {shouldDisplayPagination}
         </main>
-
     </Container>
 }
 
