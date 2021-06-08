@@ -25,8 +25,21 @@ const appLink = from([
 
 const client = new ApolloClient({
     link: appLink,
-    cache: new InMemoryCache(),
+    cache: new InMemoryCache({
+        typePolicies: {
+          CategoryTree: {
+            fields: {
+                products: {
+                    keyArgs: false,
+                    merge(existing = [], incoming) {
+                      return incoming;
+                    },
+                  }
+            },
 
+          },
+        },
+      })
 });
 
 ReactDOM.render(
