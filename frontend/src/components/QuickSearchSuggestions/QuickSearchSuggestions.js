@@ -18,7 +18,10 @@ const QuickSearchSuggestions = (props) => {
 
     const suggestions = items.map(product => {
         return <ListGroup.Item key={product.id}>
-            {product.name}
+            <a href={`/product/${product.url_key}${product.url_suffix}`}>
+                {product.name}
+                {product.url_key}
+            </a>
         </ListGroup.Item>
     });
 
