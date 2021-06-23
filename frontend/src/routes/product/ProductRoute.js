@@ -8,8 +8,6 @@ const ProductRoute = () => {
     const { productUrlKey } = useParams();
     const { productData, isLoading } = useProductRoute({ productUrlKey });
 
-    console.log(productData);
-
     const shouldRenderImage =
         productData && productData.image ? (
             <img
